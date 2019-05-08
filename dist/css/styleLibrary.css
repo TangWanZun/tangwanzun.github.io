@@ -1,3 +1,6 @@
+body {
+  background-color: white;
+}
 .content {
   width: 100vw;
   height: 100vh;
@@ -12,6 +15,18 @@
 .content-A01 {
   /* filter: contrast(20); */
   /* background-color: white; */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
@@ -35,34 +50,38 @@
             transform: rotate(359deg);
   }
 }
-.content-A01 .blur {
-  /* filter:blur(10px); */
-  width: 30vw;
-  height: 30vw;
-  margin-top: -15vw;
-  margin-left: -15vw;
+.content-A01 .blur-box {
+  width: 80vw;
+  height: 80vw;
+  max-width: 500px;
+  max-height: 500px;
+  position: relative;
+}
+.content-A01 .blur-box .blur {
+  width: 100%;
+  height: 100%;
   -webkit-border-radius: 48%;
           border-radius: 48%;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   mix-blend-mode: screen;
   -webkit-transform-origin: 51% 51%;
       -ms-transform-origin: 51% 51%;
           transform-origin: 51% 51%;
 }
-.content-A01 .blur-1 {
+.content-A01 .blur-box .blur-1 {
   background-color: red;
   -webkit-animation: blurRotate 2.5s linear infinite;
           animation: blurRotate 2.5s linear infinite;
 }
-.content-A01 .blur-2 {
+.content-A01 .blur-box .blur-2 {
   background-color: blue;
   -webkit-animation: blurRotate 3s linear infinite;
           animation: blurRotate 3s linear infinite;
   /* transform-origin: 50% 50%; */
 }
-.content-A01 .blur-3 {
+.content-A01 .blur-box .blur-3 {
   background-color: yellow;
   -webkit-animation: blurRotate 4s linear infinite;
           animation: blurRotate 4s linear infinite;
