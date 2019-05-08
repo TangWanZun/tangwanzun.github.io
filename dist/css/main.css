@@ -4,8 +4,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-body {
-  min-height: 100vh;
+body > .main {
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,19 +20,19 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
-body > .main {
+body > .main > .main-logo {
   width: 500px;
   max-width: 50vw;
   height: 220px;
-  margin-top: -15vh;
   background-image: url(../img/logo.svg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
 }
-body .title {
+body > .main .title {
   position: absolute;
   right: 5px;
   bottom: 5px;

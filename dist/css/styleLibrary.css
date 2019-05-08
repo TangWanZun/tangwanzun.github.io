@@ -1,0 +1,70 @@
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+/**
+ * 旋转彩环样式
+ */
+.content-A01 {
+  /* filter: contrast(20); */
+  /* background-color: white; */
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+@-webkit-keyframes blurRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@keyframes blurRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+.content-A01 .blur {
+  /* filter:blur(10px); */
+  width: 30vw;
+  height: 30vw;
+  margin-top: -15vw;
+  margin-left: -15vw;
+  -webkit-border-radius: 48%;
+          border-radius: 48%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: screen;
+  -webkit-transform-origin: 51% 51%;
+      -ms-transform-origin: 51% 51%;
+          transform-origin: 51% 51%;
+}
+.content-A01 .blur-1 {
+  background-color: red;
+  -webkit-animation: blurRotate 2.5s linear infinite;
+          animation: blurRotate 2.5s linear infinite;
+}
+.content-A01 .blur-2 {
+  background-color: blue;
+  -webkit-animation: blurRotate 3s linear infinite;
+          animation: blurRotate 3s linear infinite;
+  /* transform-origin: 50% 50%; */
+}
+.content-A01 .blur-3 {
+  background-color: yellow;
+  -webkit-animation: blurRotate 4s linear infinite;
+          animation: blurRotate 4s linear infinite;
+  /* transform-origin: 48% 48%; */
+}
