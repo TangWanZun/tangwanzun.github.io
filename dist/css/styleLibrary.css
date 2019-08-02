@@ -50,40 +50,80 @@ body {
             transform: rotate(359deg);
   }
 }
+@-webkit-keyframes blurRotateOut {
+  0% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes blurRotateOut {
+  0% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
 .content-A01 .blur-box {
   width: 80vw;
   height: 80vw;
   max-width: 500px;
   max-height: 500px;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .content-A01 .blur-box .blur {
   width: 100%;
   height: 100%;
-  -webkit-border-radius: 48%;
-          border-radius: 48%;
+  -webkit-border-radius: 45%;
+          border-radius: 45%;
   position: absolute;
   top: 0;
   left: 0;
   mix-blend-mode: screen;
-  -webkit-transform-origin: 51% 51%;
-      -ms-transform-origin: 51% 51%;
-          transform-origin: 51% 51%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.content-A01 .blur-box .blur-in {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  position: relative;
 }
 .content-A01 .blur-box .blur-1 {
   background-color: red;
-  -webkit-animation: blurRotate 2.5s linear infinite;
-          animation: blurRotate 2.5s linear infinite;
+  -webkit-animation: blurRotate 8s linear infinite;
+          animation: blurRotate 8s linear infinite;
 }
 .content-A01 .blur-box .blur-2 {
   background-color: blue;
-  -webkit-animation: blurRotate 3s linear infinite;
-          animation: blurRotate 3s linear infinite;
+  -webkit-animation: blurRotateOut 10s linear infinite;
+          animation: blurRotateOut 10s linear infinite;
   /* transform-origin: 50% 50%; */
 }
 .content-A01 .blur-box .blur-3 {
   background-color: yellow;
-  -webkit-animation: blurRotate 4s linear infinite;
-          animation: blurRotate 4s linear infinite;
+  -webkit-animation: blurRotate 9s linear infinite;
+          animation: blurRotate 9s linear infinite;
   /* transform-origin: 48% 48%; */
 }
